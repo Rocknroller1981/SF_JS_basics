@@ -1,26 +1,68 @@
+
+//Module 5 Task 1 start --------------------------
+
 let input = prompt("please, fill in line");
 let result = +input;
 let value = Boolean(result);
 
 if (value == true) { console.log(result % 2 == 0 ? "even" : "odd") }
 else if (result == 0) { console.log("even") }
-else if (result !== NaN) { console.log("oops, seems like an error occured") } //task1
+else if (result !== NaN) { console.log("oops, seems like an error occured") }
+else if (result == NaN) { console.log("NaN is also a number") };
+
+//Module 5 Task 1 end --------------------------
 
 
-let x = false;
-let y = typeof x;
 
-if (y == "number") { console.log("X - number") }
-else if (y == "string") { console.log("X - string") }
-else if (y == "boolean") { console.log("X - boolean") }
-else { console.log("X - undefined") } //task2
+//Module 5 Task 2 start --------------------------
 
+//variant 1 (array elements definition):
+
+let x = [5, "music", true, { name: "Nick" }];
+for (i = 0; i < x.length; i++) {
+    let y = typeof x[i];
+    if (y == "number") { console.log("X - number") }
+    else if (y == "string") { console.log("X - string") }
+    else if (y == "boolean") { console.log("X - boolean") }
+    else if (y == "object") { console.log("X - object") }
+    else { console.log("X - undefined") }
+};
+
+//variant 2 (function declaration):
+
+function myFunction(x) {
+    let y = typeof x;
+
+    if (y == "number") { console.log("X - number") }
+    else if (y == "string") { console.log("X - string") }
+    else if (y == "boolean") { console.log("X - boolean") }
+    else { console.log("X - undefined") }
+}
+myFunction(5);
+myFunction(true);
+myFunction("love");
+myFunction();
+
+//Module 5 Task 2 end --------------------------
+
+
+
+//Module 5 Task 3 start --------------------------
 
 let x = "Hello";
-console.log(x.replace("Hello", "olleH")); //task3
+console.log(x.replace("Hello", "olleH"));
 
-console.log(Math.floor(Math.random() * 101)); //task4
+//Module 5 Task 3 end --------------------------
 
+
+//Module 5 Task 4 start --------------------------
+
+console.log(Math.floor(Math.random() * 101));
+
+//Module 5 Task 4 end --------------------------
+
+
+//Module 5 Task 5 start --------------------------
 
 let x = ["apple", "orange", "banana", "mango"];
 console.log(x.length);
@@ -28,22 +70,31 @@ let y = x.map(fruit => fruit + "s");
 console.log(y);
 for (i = 0; i < y.length; i++) {
     console.log(y[i])
-}   //task5
+};
+
+//Module 5 Task 5 end --------------------------
+
+
+//Module 5 Task 6 start --------------------------
 
 let x = ["kiwi", "apple", "kiwi", "kiwi"];
 let i = 0;
 while (i < 3) {
     console.log(x[i] == x[i + 1]);
     i++
-}  //task6
-//ну или так еще можно, наверное 
-let v = x.reverse;
-console.log(x == v);  //task6 alternative
+};
+//ну или так еще можно, наверное: 
+/*let v = x.reverse;
+console.log(x == v);*/
 
+//Module 5 Task 6 end --------------------------
+
+
+// Module 5 Task 7 start --------------------------
 
 let arr = [1, 0, "apple", "car", 4, 56, "shovel", "nirvana"];
 let arr2 = [];
-arr.forEach(function (item, index, array) {
+arr.forEach(function (index) {
     arr2.push(index);
 })
 //console.log(arr2);
@@ -56,10 +107,13 @@ do {
 }
 while (i < arr2.length);
 
-console.log(even.length);
-console.log(odd.length); // task7
+console.log(even.length + " - " + "even elements count");
+console.log(odd.length + " - " + "odd elements count");
+
+//Module 5 Task 7 end --------------------------
 
 
+// Module 5 Task 8 start --------------------------
 
 let bands = new Map();
 
@@ -78,4 +132,6 @@ for (let artist of bands.values()) {
 }
 for (let playlist of bands) {
     console.log(playlist);
-}     //task8
+}
+
+// Module 5 Task 8 end --------------------------
