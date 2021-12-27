@@ -1,14 +1,10 @@
-
 //Module 5 Task 1 start --------------------------
 
 let input = prompt("please, fill in line");
 let result = +input;
 let value = Boolean(result);
 
-if (value == true) { console.log(result % 2 == 0 ? "even" : "odd") }
-else if (result == 0) { console.log("even") }
-else if (result !== NaN) { console.log("oops, seems like an error occured") }
-else if (result == NaN) { console.log("NaN is also a number") };
+if (value == true) { console.log(result % 2 == 0 ? "even" : "odd") } else if (result == 0) { console.log("even") } else if (result !== NaN) { console.log("oops, seems like an error occured") } else if (result == NaN) { console.log("NaN is also a number") };
 
 //Module 5 Task 1 end --------------------------
 
@@ -21,23 +17,16 @@ else if (result == NaN) { console.log("NaN is also a number") };
 let x = [5, "music", true, { name: "Nick" }];
 for (i = 0; i < x.length; i++) {
     let y = typeof x[i];
-    if (y == "number") { console.log("X - number") }
-    else if (y == "string") { console.log("X - string") }
-    else if (y == "boolean") { console.log("X - boolean") }
-    else if (y == "object") { console.log("X - object") }
-    else { console.log("X - undefined") }
+    if (y == "number") { console.log("X - number") } else if (y == "string") { console.log("X - string") } else if (y == "boolean") { console.log("X - boolean") } else if (y == "object") { console.log("X - object") } else { console.log("X - undefined") }
 };
 
 //variant 2 (function declaration):
 let x = [5, "music", true, { name: "Nick" }];
+
 function myFunction(x) {
     let y = typeof x;
 
-    if (y == "number") { console.log("X - number") }
-    else if (y == "string") { console.log("X - string") }
-    else if (y == "boolean") { console.log("X - boolean") }
-    else if (y == "object") { console.log("X - object") }
-    else { console.log("X - undefined") }
+    if (y == "number") { console.log("X - number") } else if (y == "string") { console.log("X - string") } else if (y == "boolean") { console.log("X - boolean") } else if (y == "object") { console.log("X - object") } else { console.log("X - undefined") }
 }
 myFunction(5);
 myFunction(true);
@@ -95,10 +84,10 @@ console.log(x == v);*/
 
 let arr = [1, 0, "apple", "car", 4, 56, "shovel", "nirvana"];
 let arr2 = [];
-arr.forEach(function (index) {
-    arr2.push(index);
-})
-//console.log(arr2);
+arr.forEach(function(index) {
+        arr2.push(index);
+    })
+    //console.log(arr2);
 let odd = [];
 let even = [];
 let i = 1;
