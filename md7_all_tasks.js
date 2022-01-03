@@ -133,6 +133,7 @@ class Wireless extends Devices {
     }
     getCharged(charge) { console.log(`the battery of your ${this.item} has a charge of ${charge}%`) }
     currentStrength() { console.log(`your ${this.item} consumes amperage of ${(this.power / this.current).toFixed(2)} amps. This ain't that much. isn't it?`) }
+        //currentStrength(){console.log(super.currentStrength())} // ну или сошлемся на метод родительского класса
 }
 
 const tv = new Devices('electric', 'TV', 220, 400)
