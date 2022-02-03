@@ -82,7 +82,10 @@ function clearChat() {
 }
 
 sendMsg.addEventListener('click', () => {
-    showText('Your message:' + "<br>" + input.value);
+    if (!input.value) { input.classList.add('empty'); return false } else {
+        input.classList.remove('empty');
+        showText('Your message:' + "<br>" + input.value)
+    };
     websocket.send(input.value)
 });
 spot.addEventListener('click', checkLocation);
@@ -145,9 +148,13 @@ function clearChat() {
 }
 
 sendMsg.addEventListener('click', () => {
-    showText('Your message:' + "<br>" + input.value);
+    if (!input.value) { input.classList.add('empty'); return false } else {
+        input.classList.remove('empty');
+        showText('Your message:' + "<br>" + input.value)
+    };
     websocket.send(input.value)
 });
+
 spot.addEventListener('click', checkLocation);
 clear.addEventListener('click', clearChat)
 
